@@ -10,8 +10,24 @@ module.exports = Em.ContainerView.extend({
   init: function(){
     // encode
     this.set('text', encodeURIComponent(this.get('text')));
-    this.set('url', encodeURIComponent(this.get('url')));
+
+    var that = this;
+    var api = 'https://www.googleapis.com/urlshortener/v1/url';
+    //var key = location.search.slice 1
+    //api += '?key='+key;
+    var url = this.get('url');
+
+    Em.$.ajax({
+        url: api
+      , type: 'POST'
+      , data: JSON.stringify({longUrl: url})
+      , contentType: 'application/json'
+      , success: function(res){
+        that.set('url', res.id);
+      }
+    });
     this._super();
+  
   },
   twitter: require('./lib/twitter'),
   facebook: require('./lib/facebook'),
