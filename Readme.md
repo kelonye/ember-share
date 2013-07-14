@@ -15,7 +15,7 @@ Use
     text: '',
     url: '',
     image: '',
-    services: 'facebook twitter g+'
+    services: 'facebook twitter g+'.w()
   });
 ```
 
