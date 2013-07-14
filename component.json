@@ -1,0 +1,16 @@
+{
+  "name": "ember-share",
+  "dependencies": {
+    "kelonye/ember": "*",
+    "kelonye/ember-link": "*"
+  },
+  "scripts": [
+    "index.js",
+    "lib/link.js",
+    "lib/facebook.js",
+    "lib/twitter.js",
+    "lib/g+.js",
+    "lib/pinterest.js"
+  ],
+  "license": "MIT"
+}
