@@ -1,8 +1,8 @@
 {
   "name": "ember-share",
   "dependencies": {
-    "kelonye/ember": "*",
-    "kelonye/ember-link": "*"
+    "kelonye/ember": "1.0.0-rc6",
+    "kelonye/ember-link": "0.0.1"
   },
   "scripts": [
     "index.js",
